@@ -12,8 +12,8 @@ function RenderCampsite({campsite}) {
                 </CardBody>
             </Card>
         </div>
-    );
-    }
+    )
+}
 
 function RenderComments({comments}) {
     if (comments) {
@@ -30,23 +30,21 @@ function RenderComments({comments}) {
                 })}
             </div>
         );
-    } 
-    return <div />;
+    } return <div></div>
 }
 
-function CampsiteInfo({props}) {
+function CampsiteInfo(props) {
     if (props.campsite) {
-        return (
-            <div className="container">
-                <div className="row">
-                    <RenderCampsite campsite={props.campsite} />
-                    <RenderComments comments={props.campsite.comments} />
-                </div>
+    return (
+        <div className="container">
+            <div className="row">
+                <RenderCampsite campsite={props.campsite} />
+                <RenderComments comments={props.campsite.comments} />
             </div>
-        );
+        </div>
+    )
     }
     return <div />;
 }
-
 
 export default CampsiteInfo;
